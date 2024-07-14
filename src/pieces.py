@@ -15,13 +15,13 @@ class Piece:
 
     def set_texture(self,size=80):
         self.texture =os.path.join(
-           f'assets/images/img={size}px/{self.color}_{self.name}.png')
+           f'assets/images/imgs-{size}px/{self.color}_{self.name}.png')
         
     def add_move(self,move):
         self.move.append(move)
 
 
-
+ 
 
 class Pawn(Piece):
     def __init__(self,color):
@@ -29,7 +29,7 @@ class Pawn(Piece):
             self.dir=-1
         else:
             self.dir =1
-        super().__init__('pawan',color,1.0)
+        super().__init__('pawn',color,1.0)
 
 
 class Knight(Piece):
